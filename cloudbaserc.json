@@ -2,6 +2,7 @@
   
   "envId": "t-gac-pro-3gjd2xrsba812230",
     "framework": {
+    "name":"t-gac-pro",
     "plugins": {
       "client": {
         "inputs": {

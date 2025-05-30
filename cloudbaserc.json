@@ -6,7 +6,7 @@
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-          "runtime": "Nodejs16.13",
+           "runtime": "Nodejs18", 
           "buildCommand": "npm run build && npx next export",
           "outputPath": "out",
           "installCommand": "npm install",

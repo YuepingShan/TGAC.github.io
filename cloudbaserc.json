@@ -1,0 +1,17 @@
+{
+  "envId": "t-gac-pro-3gjd2xrsba812230", // 替换为您的环境ID
+  "framework": {
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "runtime": "Nodejs16.13", // 关键！指定Node版本
+          "buildCommand": "npm run build && npx next export",
+          "outputPath": "out",
+          "installCommand": "npm install",
+          "httpPath": "/"
+        }
+      }
+    }
+  }
+}

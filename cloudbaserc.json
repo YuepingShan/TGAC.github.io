@@ -1,6 +1,7 @@
 {
   "envId": "t-gac-pro-3gjd2xrsba812230",
   "framework": {
+    "name": "my-next-app",
     "plugins": {
       "client": {
         "use": "@cloudbase/framework-plugin-website",

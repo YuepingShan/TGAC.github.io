@@ -10,5 +10,8 @@ const nextConfig = {
     unoptimized: true,
   },
 }
-
+module.exports = {
+  output: 'export', // 启用静态导出
+  // 其他配置...
+}
 export default nextConfig

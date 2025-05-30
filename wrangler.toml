@@ -1,6 +1,13 @@
 
+name = "your-worker-name"
 compatibility_date = "2025-05-30"
+main = "worker.js"  # 入口文件路径
 
 [site]
-bucket = "./.next"  # Next.js 构建输出目录
-entry-point = "workers-site"  # 虚拟目录名，可自定义
+bucket = "./build"  # Next.js 构建输出目录
+
+# 安装必要的 Workers 工具
+[[unsafe.bindings]]
+name = "ASSET_NAMESPACE"
+type = "kv_namespace"
+namespace_id = ""

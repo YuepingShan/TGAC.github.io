@@ -1,14 +1,12 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',
+  distDir: 'build',
+  // 添加基础路径（关键！）
+  basePath: '/build',
   images: {
-    unoptimized: true,
-  },
+    unoptimized: true
+  }
 }
 
-export default nextConfig
+export default nextConfig;

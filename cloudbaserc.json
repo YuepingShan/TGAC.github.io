@@ -1,13 +1,10 @@
 {
-  "envId": "t-gac-pro-3gjd2xrsba812230",
   "framework": {
-    "name": "my-next-app",
     "plugins": {
       "client": {
-        "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-           "runtime": "Nodejs18", 
-          "buildCommand": "npm run build && npx next export",
+          "runtime": "Nodejs18",
+          "buildCommand": "/usr/local/n/versions/node/18*/bin/node $(which npm) run build && npx next export",
           "outputPath": "out",
           "installCommand": "npm install",
           "httpPath": "/"

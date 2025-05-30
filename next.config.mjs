@@ -1,12 +1,8 @@
-// next.config.mjs
 const nextConfig = {
-  output: 'export',
-  distDir: 'build',
-  // 添加基础路径（关键！）
-  basePath: '/build',
+  output: 'export', // 关键！启用静态导出
+  distDir: 'build', // 明确指定输出目录
   images: {
-    unoptimized: true
+    unoptimized: true // 禁用图片优化
   }
-}
-
+};
 export default nextConfig;

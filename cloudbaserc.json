@@ -10,7 +10,8 @@
           "serviceName": "nextjs-app",
           "servicePath": "/",
           "localPath": ".",
-          "dockerfilePath": "./Dockerfile"
+          "dockerfilePath": "./Dockerfile",
+          "outputPath":"/out"
         }
       }
     }

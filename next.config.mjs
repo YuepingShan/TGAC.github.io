@@ -1,14 +1,8 @@
 const nextConfig = {
-  output: "export",  // 启用静态导出
-  // 添加兼容性设置
-  experimental: {
-    serverActions: false,
-    optimizeCss: true
-  },
-  // 确保正确路由
-  trailingSlash: true,
-  // 禁用不必要功能
-  poweredByHeader: false
+  output: 'export', // 关键！启用静态导出
+  distDir: 'out', // 明确指定输出目录
+  images: {
+    unoptimized: true // 禁用图片优化
+  }
 };
-
 export default nextConfig;

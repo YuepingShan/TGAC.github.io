@@ -10,7 +10,7 @@
           "runtime": "Nodejs18",
           "buildCommand": "npm run build && next export",
           "outputPath": "out",
-          "installCommand": "npm install",
+          "installCommand": "npm install --legacy-peer-deps",
           "httpPath": "/"
         }
       }

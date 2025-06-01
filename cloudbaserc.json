@@ -7,11 +7,10 @@
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-          "runtime": "Nodejs18",
-          "buildCommand": "npm run build && next export",
-          "outputPath": "out",
-          "installCommand": "npm install --legacy-peer-deps",
-          "httpPath": "/"
+          "serviceName": "nextjs-app",
+          "servicePath": "/",
+          "localPath": ".",
+          "dockerfilePath": "./Dockerfile"
         }
       }
     }

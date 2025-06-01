@@ -8,7 +8,7 @@
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
           "runtime": "Nodejs18",
-          "buildCommand": "/usr/local/n/versions/node/18*/bin/node $(which npm) run build && npx next export",
+          "buildCommand": "node $(which npm) run build && npx next export",
           "outputPath": "out",
           "installCommand": "npm install",
           "httpPath": "/"

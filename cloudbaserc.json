@@ -11,9 +11,9 @@
           "servicePath": "/",
           "localPath": ".",
           "dockerfilePath": "./Dockerfile",
-          "outputPath":"/output"
+          "outputPath":"/app/output"
         }
       }
     }
-  }
+  } 
 }

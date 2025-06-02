@@ -1,18 +1,19 @@
-# 使用官方 Node.js 18 镜像
 FROM node:18-alpine
 
-# 设置工作目录
 WORKDIR /app
 
-# 复制项目文件
+# 先安装依赖（利用Docker缓存层）
 COPY package.json pnpm-lock.yaml ./
+RUN npm install -g pnpm && pnpm install --frozen-lockfile
+
+# 再复制源码并构建
 COPY . .
+RUN pnpm run build  # next.config.mjs 已配置自动导出静态文件
 
-# 安装依赖并构建
-RUN npm install -g pnpm
-RUN pnpm install --frozen-lockfile
-RUN pnpm run build
-RUN pnpm run export
+# 验证输出目录存在
+RUN ls -la /app/output  # 调试用，确保目录存在
 
-# 设置 CloudBase 部署命令
 CMD ["sh", "-c", "tcb framework deploy --envId t-gac-pro-3gjd2xrsba812230 --verbose"]
+
+RUN echo "当前目录:" && pwd
+RUN echo "输出目录内容:" && ls -la /app/output
